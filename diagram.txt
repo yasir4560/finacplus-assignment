@@ -1,0 +1,65 @@
+                                      ┌─────────────┐
+                                      │  Data Sources│
+                                      │   (Prices)   │
+                                      └────┬────┬────┘
+                                           │    │
+                     ┌─────────────────────┘    └─────────────────────┐
+                     │                                                  │
+                     ▼                                                  ▼
+              ┌─────────────┐                                     ┌─────────────┐
+              │ Price Fetcher│                                     │ Price Fetcher│
+              │    Service   │                                     │    Service   │
+              └────┬────┬────┘                                     └────┬────┬────┘
+                   │    │                                                │    │
+                   │    │                                                │    │
+                   ▼    ▼                                                ▼    ▼
+       ┌─────────────────────────┐                            ┌─────────────────────────┐
+       │     Price Processing    │                            │     Price Processing    │
+       │       Service           │                            │       Service           │
+       └────────────┬────────────┘                            └────────────┬────────────┘
+                    │                                                         │
+                    │                                                         │
+                    ▼                                                         ▼
+             ┌─────────────┐                                          ┌─────────────┐
+             │  Portfolio   │                                          │  Portfolio   │
+             │ Update Service│                                          │ Update Service│
+             └─────┬───────┘                                           └─────┬───────┘
+                   │                                                        │
+                   │                                                        │
+                   ▼                                                        ▼
+       ┌─────────────────────────┐                            ┌─────────────────────────┐
+       │       Database          │                            │       Database          │
+       │   (Portfolio Data)      │                            │   (Portfolio Data)      │
+       └────────────┬────────────┘                            └────────────┬────────────┘
+                    │                                                         │
+                    │                                                         │
+                    ▼                                                         ▼
+              ┌─────────────┐                                          ┌─────────────┐
+              │   Web Server │                                          │   Web Server │
+              └─────┬───────┘                                          └─────┬───────┘
+                    │                                                        │
+                    ▼                                                        ▼
+       ┌─────────────────────────┐                            ┌─────────────────────────┐
+       │    User Interface       │                            │    User Interface       │
+       │   (Web & Mobile App)    │                            │   (Web & Mobile App)    │
+       └─────────────────────────┘                            └─────────────────────────┘
+
+
+
+
+Explanation
+Data Sources (Prices): Multiple external sources provide real-time price data for stocks and mutual funds.
+
+Price Fetcher Service: Services that regularly fetch price data from the data sources. These services operate concurrently to ensure that data is collected promptly from various sources.
+
+Price Processing Service: Services that process the fetched price data, ensuring it is in the correct format and ready to be used for updating portfolios.
+
+Portfolio Update Service: Services that calculate and update user portfolios based on the latest price data. This ensures that portfolios are updated as soon as new price data is available.
+
+Database (Portfolio Data): A database system that stores user account information, portfolios, and assets. This database is optimized for high-speed reads and writes to ensure real-time updates.
+
+Web Server: A server that handles requests from user interfaces. It retrieves and sends portfolio data to users.
+
+User Interface (Web & Mobile App): Interfaces through which users interact with the system. Users can view their real-time portfolio data via web browsers or mobile applications.
+
+
