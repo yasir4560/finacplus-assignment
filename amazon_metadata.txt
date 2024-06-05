@@ -1,0 +1,30 @@
+As an Amazon employee, for an item like a shirt, the metadata information I would store in the database includes:
+
+Product ID: Unique identifier for the item.
+Name: Name of the shirt.
+Description: Detailed description of the shirt.
+Category: Clothing type, such as "Men's Shirts" or "Women's Shirts".
+Brand: Brand name of the shirt.
+Price: Price of the shirt.
+Size: Available sizes (e.g., S, M, L, XL).
+Color: Available colors.
+Material: Fabric or materials used.
+SKU: Stock Keeping Unit, for inventory management.
+Stock Level: Quantity available in inventory.
+Images: URLs or links to product images.
+Ratings: Average customer rating.
+Reviews: Customer reviews and feedback.
+Dimensions: Physical dimensions of the shirt.
+Weight: Weight of the shirt.
+Supplier: Information about the supplier or manufacturer.
+Date Added: When the shirt was added to the database.
+Sales: Sales data and history.
+Using the Metadata Information:
+Inventory Management: Track stock levels and manage reordering.
+Search and Filtering: Allow customers to search and filter products by various attributes like size, color, and brand.
+Personalization: Provide personalized recommendations based on user preferences and purchase history.
+Pricing Strategy: Adjust pricing based on sales data, stock levels, and competitor pricing.
+Marketing: Create targeted marketing campaigns and advertisements.
+Customer Service: Assist customer service representatives in resolving issues and answering inquiries.
+Analytics: Analyze sales trends, customer preferences, and product performance to make data-driven decisions.
+Supplier Management: Manage supplier relationships and track product sourcing.
